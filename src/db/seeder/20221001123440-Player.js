@@ -1,0 +1,63 @@
+module.exports = {
+  async up(queryInterface, Sequelize) {
+    await queryInterface.bulkInsert('Players', [{
+      name: 'Igor',
+      surname: 'Diveev',
+      team: 'CSKA',
+      age: 27,
+      photo: 'https://hb.bizmrg.com/websiterfs/player/172076/profile_photo/5faaecb6d1dcb_thumb.jpeg',
+      coach_id: 1,
+      user_id: 1,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    },
+    {
+      name: 'Danil',
+      surname: 'Glebov',
+      team: 'Rostov',
+      age: 26,
+      photo: 'https://hb.bizmrg.com/websiterfs/player/178813/profile_photo/61b08c2f94334_thumb.jpeg',
+      coach_id: 2,
+      user_id: 2,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    },
+    {
+      name: 'Aleksandr',
+      surname: 'Sobolev',
+      team: 'Spartak',
+      age: 26,
+      photo: 'https://hb.bizmrg.com/websiterfs/player/173885/profile_photo/5f5101d63a246_thumb.jpeg',
+      coach_id: 1,
+      user_id: 2,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    },
+    {
+      name: 'Ivan',
+      surname: 'Lomaev',
+      team: 'Krylia Sovetov',
+      age: 23,
+      photo: 'https://hb.bizmrg.com/websiterfs/player/172075/profile_photo/632c5c21918b7_thumb.jpeg',
+      coach_id: 2,
+      user_id: 1,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    },
+    {
+      name: 'Georgya',
+      surname: 'Dzikia',
+      team: 'Spartak',
+      age: 28,
+      photo: 'https://hb.bizmrg.com/websiterfs/player/17505/profile_photo/5f50f728e79f2_thumb.jpeg',
+      coach_id: 1,
+      user_id: 1,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    },
+    ], {});
+  },
+  async down(queryInterface, Sequelize) {
+    await queryInterface.bulkDelete('Players', null, {});
+  },
+};
